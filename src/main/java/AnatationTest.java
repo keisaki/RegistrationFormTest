@@ -15,16 +15,6 @@ public class AnatationTest {
     private WebDriver driver;
     private String url = "https://google.com";
 
-    @DataProvider(name = "SetEnvironment", parallel = true)//??????????????????????????????????
-    public Object[][] getData() {
-        Object[][] browserProperty = new Object[][]{
-                {Platform.WIN8, "chrome", "70.0"},
-                {Platform.WIN8, "chrome", "71.0"}
-        };
-
-        return browserProperty;
-    }
-
     @BeforeSuite
     public void setUp()
     {
