@@ -40,6 +40,7 @@ public class AnatationTest {
     {
        System.out.println("Prepare is complete"); //login mb
     }
+
     @Test(groups = "checkRegestration",description="этот тест проверяет переход по ссылке")
     public void test1() throws InterruptedException {
         //WebElement obj = driver.findElement(By.xpath(""));
