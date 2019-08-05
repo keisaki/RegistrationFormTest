@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Maven_test" >
+
+    <parameter name="Requirement" value="customer_firstname,customer_lastname,passwd,address1,city,id_state,postcode,phone_mobile,alias"/>
+    <parameter name="D" value="{4,5}"/>
+    <test name="XML">
+        <classes>
+            <class name="CheckRegestration.Check_registration"></class>
+            <class name="CheckRegestration.MailCheck"></class>
+            <class name="CheckRegestration.UserDataCheck"></class>
+        </classes>
+    </test>
+</suite>
