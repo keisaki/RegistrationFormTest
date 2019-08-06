@@ -1,2 +1,9 @@
 .idea/
 target/
+java/Dependency
+java/Factory
+java/AnnotationTest.java
+java/DataProviderTest.java
+java/NewTest.java
+java/test.java
+TestiNG.xml
