@@ -11,7 +11,7 @@ public class DataProvidres {
     }
     @DataProvider
     public static Object [][] Mail_check_true_data() {
-        return new Object[][]{{"heh@gmail.com"},{"hefgdffgdgkasfh@mail.ru"}};
+        return new Object[][]{{"heh@gmail.com"},{"hefgdffgdgkasfh@mail.ru"},{"test312@mail.ru"},{"test6452@mail.ru"}};
     }
     @DataProvider
     public static Object [][] user_information_check_true_data() {
@@ -38,9 +38,5 @@ public class DataProvidres {
 
         return new Object[][]{{data,data_sl,data_ck}};
     }
-    @DataProvider
-    public static Object[][] requirementField()
-    {
-        return new Object[][]{{"customer_firstname","customer_lastname","passwd","address1","city","id_state","postcode","id_country","phone_mobile","alias"}};
-    }
+
 }

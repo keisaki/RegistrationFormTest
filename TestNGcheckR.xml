@@ -3,7 +3,10 @@
 <suite name="Maven_test" >
 
     <parameter name="Requirement" value="customer_firstname,customer_lastname,passwd,address1,city,id_state,postcode,phone_mobile,alias"/>
-    <parameter name="D" value="{4,5}"/>
+    <parameter name="Mail" value="1646692661"/>
+    <parameter name="BaseUrl" value="http://automationpractice.com/index.php?controller=authentication&amp;back=my-account"></parameter>
+    <parameter name="pathToDriver" value="D:\\work\\javaauto\\chromedriver_win32\\chromedriver.exe"></parameter>
+    <parameter name="pathToOutput" value="D:\\work\\javaauto\\test-output\\"></parameter>
     <test name="XML">
         <classes>
             <class name="CheckRegestration.Check_registration"></class>
