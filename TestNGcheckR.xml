@@ -3,7 +3,7 @@
 <suite name="Maven_test" >
 
     <parameter name="Requirement" value="customer_firstname,customer_lastname,passwd,address1,city,id_state,postcode,phone_mobile,alias"/>
-    <parameter name="Mail" value="165465561"/>
+    <parameter name="Mail" value="177761"/>
     <parameter name="BaseUrl" value="http://automationpractice.com/index.php?controller=authentication&amp;back=my-account"></parameter> <!-- valid login for userDataCheck -->
     <test name="CheckRegistrationForm">
         <classes>
