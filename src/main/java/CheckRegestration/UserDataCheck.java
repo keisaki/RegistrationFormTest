@@ -41,7 +41,8 @@ public class UserDataCheck extends Check_registration {
         driver.get(baseUrl);
         waitForPageLoad();
         mailIn();
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
+        waitElement("create_account_error");
         List<WebElement> obj = driver.findElements(By.xpath("//*[@id=\"create_account_error\"]/ol/li"));
         for(WebElement el:obj)
         {
@@ -61,7 +62,7 @@ public class UserDataCheck extends Check_registration {
             return;
         }
         waitForPageLoad();
-        //Thread.sleep(2000);
+        waitElement("id_gender1");
         if (new Random().nextBoolean())
             driver.findElement(By.id("id_gender1")).click();
         else
@@ -75,7 +76,7 @@ public class UserDataCheck extends Check_registration {
             System.out.println("Item : " + item.getKey() + " Count : " + item.getValue());
             new Select(driver.findElement(By.id(item.getKey()))).selectByIndex(item.getValue());
         }
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
         for (Map.Entry<String, Boolean> item : data_ck.entrySet()) {
             System.out.println("Item : " + item.getKey() + " Count : " + item.getValue());
             if(item.getValue())
@@ -83,9 +84,10 @@ public class UserDataCheck extends Check_registration {
         }
 
 
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
+        waitElement("submitAccount");
         driver.findElement(By.id("submitAccount")).click();
-        Thread.sleep(1000);
+        waitForPageLoad();
         String actualTitle = driver.getTitle();
         String expectedTitle = "My account - My Store";
         if (!actualTitle.equals(expectedTitle))
@@ -107,6 +109,7 @@ public class UserDataCheck extends Check_registration {
         }
 
         waitForPageLoad();
+        waitElement("id_gender1");
         if (new Random().nextBoolean())
             driver.findElement(By.id("id_gender1")).click();
         else
@@ -117,6 +120,7 @@ public class UserDataCheck extends Check_registration {
             waitForPageLoad();
 
         for (Map.Entry<String, String> item : data.entrySet()) {
+            waitElement(item.getKey());
             driver.findElement(By.id(item.getKey())).clear();
             if(!item.getKey().equals(s))
             {
@@ -141,7 +145,7 @@ public class UserDataCheck extends Check_registration {
         }
 
         driver.findElement(By.id("submitAccount")).click();
-            Thread.sleep(1000);
+        waitElement("center_column");
         List<WebElement> obj = driver.findElements(By.xpath("//*[@id=\"center_column\"]/div/ol/li"));
 
         for(WebElement el:obj)
@@ -160,12 +164,12 @@ public class UserDataCheck extends Check_registration {
             waitForPageLoad();
             mail=mail+new Random().nextInt(100);
             mailIn();
-            Thread.sleep(2000);
+            //Thread.sleep(2000);
         }
         }
-        Thread.sleep(1000);
-        System.out.println("false end");
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
+        //System.out.println("false end");
+        //Thread.sleep(1000);
 
 
     }

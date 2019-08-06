@@ -3,6 +3,7 @@ package CheckRegestration;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
@@ -25,6 +26,11 @@ public class Check_registration {
     String DriverPath;
     private static String outputPath;
     private static List<String> errors_list;
+
+    public static void waitElement(String _id)
+    {
+        new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.id(_id)));
+    }
 
     @Parameters(value = {"BaseUrl","pathToDriver","pathToOutput"})
     @BeforeTest

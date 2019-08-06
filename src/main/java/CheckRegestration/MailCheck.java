@@ -15,8 +15,9 @@ public class MailCheck extends Check_registration {
         WebElement text_area =  driver.findElement(By.id("email_create"));
         text_area.sendKeys(mail);
         text_area.submit();
+        //Thread.sleep(2000);
+        waitElement("create-account_form");
         Thread.sleep(2000);
-
         Boolean isPresent = (driver.findElements(By.id("create-account_form")).size()>0);
         if(isPresent)
             System.out.println("all ok");
@@ -36,8 +37,9 @@ public class MailCheck extends Check_registration {
         WebElement text_area =  driver.findElement(By.id("email_create"));
         text_area.sendKeys(mail);
         text_area.submit();
+        //Thread.sleep(2000);
+        waitElement("create-account_form");
         Thread.sleep(2000);
-
         Boolean isPresent = (driver.findElements(By.id("create-account_form")).size()>0);
         if(!isPresent)
             System.out.println("all ok");
